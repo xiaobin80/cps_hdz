@@ -1,0 +1,2 @@
+seriary_number,total_weight,carry_weight,self_weight,jz_weight,yk_weight,
+car_marque,car_number,past_date,past_time

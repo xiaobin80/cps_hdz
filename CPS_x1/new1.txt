@@ -1,0 +1,1 @@
+Provider=SQLOLEDB.1;Password=xiaobin;Persist Security Info=True;User ID=sa;Initial Catalog=pubs;Data Source=BRXL1SERVER

@@ -1,0 +1,9 @@
+辆序  总重  其它  车型  车号  载重  自重  日期  时间
+
+seriary_number,total_weight1,other,car_marque,car_number,carry_weight1,self_weight1,past_date,past_time
+
+([total_weight1] * 100)
+([carry_weight1] * 100)
+([self_weight1] * 100)
+([total_weight1] * 100 - [self_weight1] * 100)
+([total_weight1] * 100 - [self_weight1] * 100 - [carry_weight1] * 100)
