@@ -14,13 +14,15 @@ service
 # Dev
 - IDE: Delphi6/7
 - DB: MS SQL 2000
+- OS: Windows XP SP3 简体中文专业版
+
 
 ## DB
 The database uses the dts of sql2000.    
 Usage [writeXBF](https://github.com/xiaobin80/writeXBF) read "*.xbf", configure the correct database parameters.
 
 ### Hour 12
-12 hour report at [docs](https://github.com/xiaobin80/cps_hdz/blob/main/docs/h12pointTable/)
+12 hour report SQL Script at [docs](https://github.com/xiaobin80/cps_hdz/blob/main/docs/h12pointTable/)
 
 
 ## User
@@ -58,7 +60,7 @@ System administrator
 ## Stored Procedure
 打开Microsoft SQL Server -> 企业管理器    
 在数据库 -> pubs -> 存储过程    
-点击右键“新建存储过程”， 把输入如下：
+点击右键“新建存储过程”， 输入如下： 
 sp1121.sql:
 ```sql
 if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[inittable112]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
@@ -84,7 +86,7 @@ GO
 
 
 ## Initialize 程序
-|主程序|Servic|
+|主程序|Service|
 |-|-|
 |ld04|station04|
 |lmd02|station02|
@@ -127,8 +129,13 @@ empty
 > Data Transformation Services
 
   在初版的时候，使用的是SQL2000的DTS.    
+![dts all](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-1.png)
+![dts create table](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-2.png)
+![dts read csv](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-3.png)
+![dts connection sql2000](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-4.png)
 
-  只保存了Station02一个站点样例，其他站点(Station04, Station07)操作相同.   
+
+  只保存了Station02一个站点样例，其他站点(Station04, Station07)操作相同.
 
   DTS使用的新建的数据库: brxl_server
 
