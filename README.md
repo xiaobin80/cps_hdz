@@ -11,6 +11,7 @@ CDP_x1
 - Windows Service program    
 service
 
+
 # Dev
 - IDE: Delphi6/7
 - DB: MS SQL 2000
@@ -129,10 +130,6 @@ empty
 > Data Transformation Services
 
   在初版的时候，使用的是SQL2000的DTS.    
-![dts all](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-1.png)
-![dts create table](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-2.png)
-![dts read csv](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-3.png)
-![dts connection sql2000](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-4.png)
 
 
   只保存了Station02一个站点样例，其他站点(Station04, Station07)操作相同.
@@ -143,6 +140,11 @@ empty
 企业管理器 -> Microsoft SQL Servers -> SQL Server 组 -> (local)(Windows NT)    
 -> 数据转换服务,  点击右键“打开包”, 选择"[station02.dts](https://github.com/xiaobin80/cps_hdz/blob/main/init/brxl_sqlsrcipt/station02.dts)"
 
+![dts all](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-1.png)
+![dts create table](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-2.png)
+![dts read csv](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-3.png)
+![dts connection sql2000](https://github.com/xiaobin80/cps_hdz/blob/main/docs/pics/dts-4.png)
+
 
 ## Service 程序
   替代DTS服务
@@ -152,7 +154,7 @@ sc.exe create data_abstract binPath= "C:\Windows\CPS_service.exe" DisplayName= "
 ```
 
 ```cmd
-sc config data_abstract depend= MSSQLSERVER
+sc.exe config data_abstract depend= MSSQLSERVER
 ```
 
 
